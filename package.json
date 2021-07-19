@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "create-database": "psql -U postgres -h localhost -f sql/create-database.sql",
+    "create-table": "psql -U postgres -h localhost -d voicetotext -f sql/create-tables.sql",
+    "seed-table": "psql -U postgres -h localhost -d voicetotext -f sql/seed-tables.sql",
     "dev": "nodemon -r dotenv/config index.js"
   },
   "keywords": [],
@@ -18,6 +21,8 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "node-record-lpcm16": "^1.0.1",
+    "pg": "^8.6.0",
+    "pg-promise": "^10.10.2",
     "save": "^2.4.0",
     "sox": "^0.1.0"
   },

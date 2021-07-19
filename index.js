@@ -44,7 +44,7 @@ app.use(morgan('dev'))
 
 
 const voiceNoteRouter = require('./routes/voiceNote')
-app.use('/', voiceNoteRouter)
+app.use('/voiceNote', voiceNoteRouter)
 //const test2Router = require('./routes/test2')
 //app.use('/test2', test2Router)
 

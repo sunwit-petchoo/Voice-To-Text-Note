@@ -11,12 +11,24 @@
     </head>
 <body>
 <body>
-    <h1>Speech regocnition</h1>
-    <p><em>Hint: try saying a color name</em></p>
-    <h1>
-        <button onclick="startRecording()">Start recording</button>
-        <button id="stop">Stop recording</button>
-    </h1>
-    <div class="words-container"></div>
+    <h1>Voice note</h1>
+    <p><em>Start recording, say your idea and save !!!</em></p>
+    <form action="/voiceNote" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <textarea id="wordsContainer" name="wordsContainer" rows="4" cols="50"></textarea>
+        <div>
+           
+            <button type="submit">save</button>
+        </div>
+      </form> 
+      <button onclick="startRecording()">Start recording</button>
+      <button id="stop">Stop recording</button>
+    
+    
+    
+    
+    
+    
 </body>
 </html>

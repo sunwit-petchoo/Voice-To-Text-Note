@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS voicetotext;
+CREATE DATABASE voicetotext;
