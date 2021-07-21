@@ -7,8 +7,8 @@ const path = require('path')
 const port = process.env.PORT || 3000
 
 //layouts
-//const expressLayouts = require('express-ejs-layouts')
-//app.use(expressLayouts)
+const expressLayouts = require('express-ejs-layouts')
+app.use(expressLayouts)
 
 //body passer
 app.use(express.json())
@@ -41,10 +41,22 @@ app.use(morgan('dev'))
 
 
 //routes
+const homeRouter = require('./routes/home')
+const voiceNoteRouter = require('./routes/voicenote')
+const checklistRouter = require('./routes/checklist')
+const voicenoteViewRouter = require('./routes/voicenote_view')
+const checklistUpdateRouter = require('./routes/checklist_update')
+//const translationRouter = require('./routes/translation')
 
-
-const voiceNoteRouter = require('./routes/voiceNote')
+app.use('/', homeRouter)
+app.use('/home', homeRouter)
 app.use('/voiceNote', voiceNoteRouter)
+app.use('/checklist', checklistRouter)
+app.use('/voicenote_view', voicenoteViewRouter)
+app.use('/checklist_update', checklistUpdateRouter)
+/* app.use('/voicenote_view', voicenoteViewRouter)
+app.use('/checklist_update', checklistUpdateRouter)
+app.use('/translation', translationRouter) */
 //const test2Router = require('./routes/test2')
 //app.use('/test2', test2Router)
 

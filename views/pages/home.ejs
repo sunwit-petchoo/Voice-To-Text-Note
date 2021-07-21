@@ -1,0 +1,111 @@
+<main class="px-3">
+  <!-- <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom text-start">Create your note</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon">
+          <img class="feature-icon" src="img/voicenote.png">
+        </div>
+        <h2>Voice Note</h2>
+        <p>Simple way to create your note using your voice.</p>
+        <a href="/voicenote" class="icon-link">
+          Create >>
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon">
+          <img class="feature-icon" src="img/todolist.png">
+        </div>
+        <h2>Checklist</h2>
+        <p>Easier and faster way to create your check list.</p>
+        <a href="/checklist" class="icon-link">
+          Create >>
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon">
+          <img class="feature-icon" src="img/translate.png">
+        </div>
+        <h2>Translation</h2>
+        <p>Quickly translate to your language by capture the speech.</p>
+        <a href="/translation" class="icon-link">
+          Create >>
+        </a>
+      </div>
+    </div>
+  </div> -->
+  <div class="container px-4 py-5" id="featured-3">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            <h2 class="pb-2 border-bottom text-start">Create your note</h2>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+              <div class="feature col">
+                <div class="feature-icon">
+                  <img class="feature-icon" src="img/voicenote.png">
+                </div>
+                <h2>Voice Note</h2>
+                <p>Simple way to create your note using your voice.</p>
+                <a href="/voicenote" class="icon-link">
+                  Create >>
+                </a>
+              </div>
+              <div class="feature col">
+                <div class="feature-icon">
+                  <img class="feature-icon" src="img/todolist.png">
+                </div>
+                <h2>Checklist</h2>
+                <p>Easier and faster way to create your check list.</p>
+                <a href="/checklist" class="icon-link">
+                  Create >>
+                </a>
+              </div>
+              <div class="feature col">
+                <div class="feature-icon">
+                  <img class="feature-icon" src="img/translate.png">
+                </div>
+                <h2>Translation</h2>
+                <p>Quickly translate to your language by capture the speech.</p>
+                <a href="/translation" class="icon-link">
+                  Create >>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="featured-1">
+    <h2 class="pb-2 border-bottom text-start">Recent</h2>
+    <div class="row g-4 py-4 row-cols-1">
+      <table style="width: 80%; margin-left: auto; margin-right: auto;" class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th style="color: #F48120;">Title</th>
+            <th style="color: #F48120;">Type</th>
+            <th style="color: #F48120;">Date modified</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (lists.length != 0) { %>
+            <% lists.forEach((list)=>{%>
+          <tr> 
+            <td>
+              <% if ( list.type == 'Voice note'){ %> <a href="/voicenote_view/<%= list.id %>?view=true"><%= list.title %></a> <% } else { %> <a href="/checklist_update/<%= list.id %>?view=true"><%= list.title %></a> <% } %>
+            </td>
+            <td><%= list.type %></td>
+            <td><%= list.create_at %></td>
+          </tr>
+          <% }) %> 
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>

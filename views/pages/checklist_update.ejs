@@ -1,0 +1,32 @@
+<main class="px-3">
+    <div>
+        <div id="msgBar" class="alert <%= msgStatus %> alert-dismissible fade show" role="alert">
+            <strong id="msgTxt"><%= msg %></strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <h2><%= title %></h2>
+        <p class="lead">Click on completed items. They will be crossed off as they are completed.!!!</p>
+        <br>
+        <div class="d-grid gap-2 col-6 mx-auto text-center">
+            <div class="list-group">
+              <% contents.forEach((content)=>{%>
+                <button id="<%= content.check_item_id %>" type="button" class="list-group-item list-group-item-action"><%= content.check_content %></button>
+              <% }) %> 
+            </div>
+            <p></p>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <a id="btnBack" class="btn btn-normal" href="/home" role="button">BACK</a>
+                  </div>
+                  <div class="col">
+                    <button id="btnUpdate" type="button" class="btn btn-normal">UPDATE</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- References to external JS files -->
+<script src="/js/checklist.js"></script>

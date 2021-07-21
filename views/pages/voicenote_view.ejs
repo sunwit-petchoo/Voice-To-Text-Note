@@ -1,0 +1,16 @@
+<main class="px-3">
+    <div>
+        <div id="msgBar" class="alert <%= msgStatus %> alert-dismissible fade show" role="alert">
+            <strong id="msgTxt"><%= msg %></strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <h2><%= title %></h2>
+        <br>
+        <p></p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <textarea class="form-control disabled" id="exampleFormControlTextarea1" rows="8" disabled readonly><%= content %></textarea>
+            <p></p>
+            <a id="btnBack" class="btn btn-normal" href="/home" role="button">BACK</a>
+        </div>
+    </div>
+</main>

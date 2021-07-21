@@ -1,0 +1,76 @@
+/*============================
+    APPLICATION
+============================*/
+.btn-normal {
+    background-color: #F48120;
+    font-weight: bold;
+    width: 100%;
+}
+.btn-normal:hover {
+    background-color: #FAAD3F;
+}
+
+.title {
+    margin-bottom: 2%;
+}
+
+/*============================
+    HEADER
+============================*/
+.nav-link {
+    color: #F48120;
+}
+.nav-link:hover {
+    color: #FAAD3F;
+}
+
+/*============================
+    HOMEPAGE
+============================*/
+.icon-link {
+    color: #F48120;
+}.icon-link:hover {
+    color: #FAAD3F;
+}
+
+.feature-icon {
+    width: 90%; 
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-button {
+    background-color: #212529;
+    color: #FFF;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #212529;
+    color: #FFF;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-icon-color {
+    background-color: #FFF;
+}
+.accordion-icon-active-color {
+    background-color: #FFF;
+}
+.accordion-item {
+    background-color: #212529;
+}
+
+/*============================
+    CHECKLIST
+============================*/
+#list-item {
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: left;
+    background-color: #FFF;
+    color: #000;
+}
+
+
