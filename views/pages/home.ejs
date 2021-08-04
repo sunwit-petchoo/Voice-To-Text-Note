@@ -89,7 +89,7 @@
           <tr>
             <th style="color: #F48120;">Title</th>
             <th style="color: #F48120;">Type</th>
-            <th style="color: #F48120;">Date modified</th>
+            <th style="color: #F48120;">Date created</th>
           </tr>
         </thead>
         <tbody>
@@ -97,7 +97,7 @@
             <% lists.forEach((list)=>{%>
           <tr> 
             <td>
-              <% if ( list.type == 'Voice note'){ %> <a href="/voicenote_view/<%= list.id %>?view=true"><%= list.title %></a> <% } else { %> <a href="/checklist_update/<%= list.id %>?view=true"><%= list.title %></a> <% } %>
+              <% if ( list.type == 'Voice note'){ %> <a class="link-info" href="/voicenote_view/<%= list.id %>?view=true"><%= list.title %></a> <% } else { %> <a class="link-info" href="/checklist_update/<%= list.id %>?view=true"><%= list.title %></a> <% } %>
             </td>
             <td><%= list.type %></td>
             <td><%= list.create_at %></td>

@@ -9,12 +9,13 @@ const router = express.Router()
 }) */
 router.get('/', (req, res) => {
     const query = "select memo_name as title , memo_id as id, type, to_char(create_at,\' DD/MM/YYYY fmHH12:MI AM\') as create_at " + 
-    "from memo_list union all select check_name, check_id, type, to_char(create_at,\' DD/MM/YYYY fmHH12:MI AM\') as create_at from check_list order by create_at asc "
+    "from memo_list union all select check_name, check_id, type, to_char(create_at,\' DD/MM/YYYY fmHH12:MI AM\') as create_at from check_list order by create_at desc "
+    
      db.any(query)
      .then((lists) =>{
-            
+        console.log(lists.length)
             res.render('pages/home',{
-                lists: lists.length >0 ? lists : 0,
+                lists: lists.length >0 ? lists : [],
                 layout: './layouts/full-width'
             })
      })
